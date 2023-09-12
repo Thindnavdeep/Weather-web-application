@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+
+}
+body{
+    height: 100vh;
+    background: #263859;
+
+}
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card
+{
+    max-width: 80vw;
+    height: auto;
+    background: rgba(255, 255, 255, 0.286);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.2),
+    10px 10px 15px rgba(0,0,0,0.2)
+    ,15px 15px 20px rgba(0,0,0,0.2),
+    inset 2px 2px rgba(255,255,255,0.5),
+    inset -2px -2px rgba(0,0,0,0.7);
+    
+}
+/* .card .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+} */
+#search_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+}
+#search_form ion-icon
+{
+    position: absolute;
+    left: -30px;
+    color: #fff;
+    font-size: 25px;
+}
+#search_form input{
+    width: 50rem;
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    outline: none;
+    border: none;
+    color:#263859;
+    /* font-family: consolas; */
+    padding: 5px;
+    background: none;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+#search_form span{
+    width: 52vw;
+    height: 3px;
+    background: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+#search_form input:focus{
+    background: rgba(255, 255, 255, 0.3);
+}
+#search_form input:focus ~ span{
+    background: #fff;
+}
+#search_form input::placeholder{
+    color: #263859a5;
+}
+
+button{
+    margin-left:20px ;
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s;
+    font-weight: 900;
+    cursor: pointer;
+}
+button:hover{
+    background: #263859;
+    color: #fff;
+    transform: scale(1.2) translateY(-5px);
+}
+.city
+{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+#temp
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#temp #temp-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* margin: 20px; */
+}
+#temp img{
+    width: 20vh;
+    height: auto;
+}
+#app_contanier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#location
+{
+    padding: 10px;
+}
+#location p{
+    /* font-size: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+#temp p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 900;
+}
+#temp_unit{
+    font-size: 30px;
+    position: relative;
+    top: -10px;
+}
+#climate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 10px; */
+}
+#climate p{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 900;
+    padding: 5px;
+    text-transform: capitalize;
+}
+.loading
+{
+    display: none;
+    /* visibility: hidden; */
+    max-height: 20px;
+}
+.loading::after{
+    /* visibility: ; */
+    display: block;
+    position: absolute;
+    content: "Loading.....";
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    bottom: -20px;
+    left: 50px;
+}
